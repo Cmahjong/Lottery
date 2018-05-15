@@ -32,7 +32,7 @@ class StartActivity : AppCompatActivity() {
 
     private fun refreshData() {
         (application as App).client.userService
-                .upData("cs999", "android")
+                .upData("xiaomno1", "android")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(object : Observer<UpDataResponse> {
@@ -44,15 +44,21 @@ class StartActivity : AppCompatActivity() {
                     }
 
                     override fun onNext(t: UpDataResponse) {
-                        if (t.data.is_jump == "1") {
-                            val intent = Intent(this@StartActivity, DownLandActivity::class.java)
-                            intent.putExtra("url", t.data.jump_url)
-                            startActivity(intent)
-                            onBackPressed()
-                        } else {
+                        try {
+                            if (t.data.is_jump == "1") {
+                                val intent = Intent(this@StartActivity, DownLandActivity::class.java)
+                                intent.putExtra("url", t.data.jump_url)
+                                startActivity(intent)
+                                onBackPressed()
+                            } else {
+                                startActivity(Intent(this@StartActivity, MainActivity::class.java))
+                                onBackPressed()
+                            }
+                        } catch (e: Exception) {
                             startActivity(Intent(this@StartActivity, MainActivity::class.java))
                             onBackPressed()
                         }
+
 
                     }
 
