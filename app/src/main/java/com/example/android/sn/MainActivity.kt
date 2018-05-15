@@ -15,6 +15,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
+import zlc.season.rxdownload3.RxDownload
+import zlc.season.rxdownload3.core.Status
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,30 +24,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         assignView()
-        refreshData()
     }
 
-    private fun refreshData() {
-        (application as App).client.userService
-                .upData("cs999","android")
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(object :Observer<UpDataResponse>{
-                    override fun onComplete() {
 
-                    }
-
-                    override fun onSubscribe(d: Disposable) {
-                    }
-
-                    override fun onNext(t: UpDataResponse) {
-                        Toast.makeText(this@MainActivity,"成功",Toast.LENGTH_LONG).show()
-                    }
-
-                    override fun onError(e: Throwable) {
-                    }
-                })
-    }
 
     private fun assignView() {
         view_pager.adapter=PageAdapter(supportFragmentManager)
@@ -64,9 +45,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-        RxPermissions(this)
-                .request(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                .subscribe {}
+
 
         tv1.setOnClickListener {
             view_pager.currentItem=0

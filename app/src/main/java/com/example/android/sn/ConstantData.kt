@@ -35,7 +35,7 @@ object ConstantData {
             Data("22.64亿巨奖得主化身“萌萌猴”三天火速领奖", "中彩网", "http://www.zhcw.com/upload/resources/image/2016/01/18/457760.jpg", "2015-03-23 15:23:38 ", "http://www.zhcw.com/xinwen/tpxw/tpxw1/3816881.shtml"),
             Data("5.2亿双色球巨奖站点曝光：内外装修忙", "中彩网", "http://www.zhcw.com/upload/Image/xinwen5/1_38112982687.jpg", "2015-02-06 15:22:57", "http://www.zhcw.com/xinwen/tpxw/tpxw1/3811275.shtml"),
             Data("广东福彩刮刮乐手工艺品赏析", "中彩网", "http://www.zhcw.com/upload/Image/xinwen5/1_37789791997.jpg", "2014-08-15 15:53:36", "http://www.zhcw.com/xinwen/tpxw/tpxw1/3778966.shtml"),
-            Data("福彩3D十年风采录","","http://www.zhcw.com/xinwen/tpxw/tpxw1/3753988.shtml","","http://www.zhcw.com/xinwen/tpxw/tpxw1/3753988.shtml"),
+            Data("福彩3D十年风采录","","http://www.zhcw.com/upload/Image/xinwen5/1_37539896741.jpg","","http://www.zhcw.com/xinwen/tpxw/tpxw1/3753988.shtml"),
             Data("浙江福彩公益广告设计评选结果揭晓","","http://www.zhcw.com/upload/Image/xinwen5/1_36996198084.jpg","","http://www.zhcw.com/xinwen/tpxw/tpxw1/3699594.shtml"),
             Data("拾荒男称研究出彩票中奖号码公式","","http://www.zhcw.com/upload/Image/xinwen5/1_36856392437.jpg","","http://www.zhcw.com/xinwen/tpxw/tpxw1/3685620.shtml"),
             Data("守护星星的孩子 内蒙福彩记录成长中的丑小鸭","","http://www.zhcw.com/upload/Image/xinwen5/1_36656457506.jpg","","http://www.zhcw.com/xinwen/tpxw/tpxw1/3665644.shtml"),
